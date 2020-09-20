@@ -1,5 +1,9 @@
-// Lab1 - Nick and Rose.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+ * @FileName: Main.cpp
+ * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
+ * @Date    : September 20, 2020
+ *
+ */
 
 #include <ctime>
 #include <iostream>
