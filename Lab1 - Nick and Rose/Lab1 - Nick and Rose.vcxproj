@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab1 - Nick and Rose.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyConsoleInput.cpp" />
     <ClCompile Include="WorkTicket.cpp" />
   </ItemGroup>

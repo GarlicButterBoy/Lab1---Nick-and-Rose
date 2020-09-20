@@ -1,3 +1,10 @@
+/*
+ * @FileName: MyConsoleInput.h
+ * @Author  : Nick Sturch-Flint and Rose Nguyen
+ * @Date    : September 20, 2020
+ *
+ */
+
 #pragma once
 #ifndef MY_CONSOLE_INPUT_H
 

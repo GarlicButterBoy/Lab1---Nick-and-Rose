@@ -1,3 +1,10 @@
+/*
+ * @FileName: MyConsoleInput.cpp
+ * @Author  : Nick Sturch-Flint and Rose Nguyen
+ * @Date    : September 20, 2020
+ *
+ */
+
 #include "MyConsoleInput.h"
 #include <iostream>
 #include <iomanip>
