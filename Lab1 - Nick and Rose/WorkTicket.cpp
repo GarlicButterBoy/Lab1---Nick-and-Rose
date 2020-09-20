@@ -1,18 +1,15 @@
 /*
  * @FileName: WorkTicket.cpp
- * @Author  : Nick Sturch-Flint and Rose Nguyen
+ * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
  * @Date    : September 20, 2020
  *
  */
 
 #include "WorkTicket.h"
 #include <iostream>
-
 #include "MyConsoleInput.h"
 
-
-
-
+//WorkTicket definition
 WorkTicket::WorkTicket(int ticketNumber, string ticketDate, string ticketID, string ticketDescription)
 {
 	myTicketNumber = ticketNumber;
@@ -21,6 +18,7 @@ WorkTicket::WorkTicket(int ticketNumber, string ticketDate, string ticketID, str
 	myDescription = ticketDescription;
 }
 
+//Destructor
 WorkTicket::~WorkTicket()
 =default;
 
@@ -43,7 +41,7 @@ string WorkTicket::GetTicketDate()
 }
 
 /// <summary>
-/// Retrieves WorkTicker Identification Number
+/// Retrieves WorkTicket Identification Number
 /// </summary>
 /// <returns></returns>
 string WorkTicket::GetID()
@@ -60,12 +58,21 @@ string WorkTicket::GetDescription()
 	return myDescription;
 }
 
-
+/// <summary>
+/// Sets the Ticket Number
+/// </summary>
+/// <param name="ticketNumber"></param>
 void WorkTicket::SetTicketNumber(int ticketNumber)
 {
 	myTicketNumber = ticketNumber;
 }
 
+/// <summary>
+/// Sets the Ticket Date
+/// </summary>
+/// <param name="day"></param>
+/// <param name="month"></param>
+/// <param name="year"></param>
 void WorkTicket::SetTicketDate(int day, int month, int year)
 {
 	int myDay, myMonth, myYear;
@@ -87,12 +94,19 @@ void WorkTicket::SetTicketDate(int day, int month, int year)
 	myYear = yearInput;
 }
 
+/// <summary>
+/// Sets the Ticket Client ID
+/// </summary>
 void WorkTicket::SetID()
 {
-	//const string clientID = GenerateClientID();
-	//myID = clientID;
+	const string clientID;
+	myID = clientID;
 }
 
+/// <summary>
+/// Sets the Ticket Reason (Description)
+/// </summary>
+/// <param name="description"></param>
 void WorkTicket::SetDescription(string description)
 {
 	getline(cin, description);

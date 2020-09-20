@@ -1,6 +1,6 @@
 /*
  * @FileName: WorkTicket.h
- * @Author  : Nick Sturch-Flint and Rose Nguyen
+ * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
  * @Date    : September 20, 2020
  *
  */
@@ -17,7 +17,7 @@ class WorkTicket
 public:
 
 	//Constructors
-	WorkTicket(int ticketNumber = 0, string ticketDate = "", string ticketID = "", string ticketDescription = "");
+	WorkTicket(int ticketNumber = 0, string ticketDate = "1/1/2000", string ticketID = "", string ticketDescription = "");
 
 	//Destructor
 	~WorkTicket();
@@ -36,13 +36,12 @@ public:
 
 	//Methods (Functions)
 	string ToString();
-
-	//Methods
 	string ArrayToString(char* a, int size);
 	string GenerateClientID();
 	int GenerateTicketNumber();
 
 private:
+	//Data Members
 	int myTicketNumber;
 	string myDate;
 	string myID;

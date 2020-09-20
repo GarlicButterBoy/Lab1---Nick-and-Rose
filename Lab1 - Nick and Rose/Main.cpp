@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const int ARRAY_SIZE = 1;
+const int ARRAY_SIZE = 3;
 
 /// <summary>
 ///Turns a Char array into a string
@@ -90,7 +90,7 @@ string DateToString(int day, int month, int year)
 /// Asks for user inputs, then generates a WorkTicket
 /// </summary>
 /// <returns></returns>
-WorkTicket ReadWorkTicketInfo()
+WorkTicket SetWorkTicket()
 {
 	int day, month, year;
 	int ticketNumber;
@@ -131,7 +131,7 @@ void BuildTicketArray(WorkTicket tickets[])
 	for (int count = 0; count < ARRAY_SIZE; count++)
 	{
 		cout << "===============================================" << endl << endl;
-		tickets[count] = ReadWorkTicketInfo();
+		tickets[count] = SetWorkTicket();
 	}
 }
 
@@ -139,7 +139,7 @@ void BuildTicketArray(WorkTicket tickets[])
 /// Outputs the WorkTicket to the Screen
 /// </summary>
 /// <param name="tickets"></param>
-void DisplayTicketArray(WorkTicket tickets[])
+void ShowWorkTicket(WorkTicket tickets[])
 {
 	for (int count = 0; count < ARRAY_SIZE; count++)
 	{
@@ -157,5 +157,5 @@ int main()
 	WorkTicket tickets[ARRAY_SIZE];
 
 	BuildTicketArray(tickets);
-	DisplayTicketArray(tickets);
+	ShowWorkTicket(tickets);
 }
