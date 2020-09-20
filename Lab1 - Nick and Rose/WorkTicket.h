@@ -37,11 +37,19 @@ public:
 	//Methods (Functions)
 	string ToString();
 
+	//Methods
+	string ArrayToString(char* a, int size);
+	string GenerateClientID();
+	int GenerateTicketNumber();
+
 private:
 	int myTicketNumber;
 	string myDate;
 	string myID;
 	string myDescription;
 };
+
+
+
 
 #endif

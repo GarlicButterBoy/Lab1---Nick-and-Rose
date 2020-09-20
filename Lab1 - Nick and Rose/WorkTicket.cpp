@@ -11,6 +11,8 @@
 #include "MyConsoleInput.h"
 
 
+
+
 WorkTicket::WorkTicket(int ticketNumber, string ticketDate, string ticketID, string ticketDescription)
 {
 	myTicketNumber = ticketNumber;
@@ -61,7 +63,7 @@ string WorkTicket::GetDescription()
 
 void WorkTicket::SetTicketNumber(int ticketNumber)
 {
-
+	myTicketNumber = ticketNumber;
 }
 
 void WorkTicket::SetTicketDate(int day, int month, int year)
@@ -87,15 +89,31 @@ void WorkTicket::SetTicketDate(int day, int month, int year)
 
 void WorkTicket::SetID(string clientID)
 {
-
+	myID = GenerateClientID();
 }
 
 void WorkTicket::SetDescription(string description)
 {
 	getline(cin, description);
+	myDescription = description;
 }
 
-//string WorkTicket::ToString()
-//{
+//Printing the final ticket
+string WorkTicket::ToString()
+{
 
-//}
+	string outputStr;
+	outputStr += "\n========================================\n";
+	outputStr += "Ticket Number: " +  to_string(GetTicketNumber()) + "\n";
+	outputStr += "Ticket Date: " + GetTicketDate() + "\n";
+	outputStr += "Ticket ID: " + GetID() + "\n";
+	outputStr += "Ticket Description: " + GetDescription() + "\n";
+	outputStr += "\n========================================\n";
+
+	return outputStr;
+
+}
+
+
+
+
