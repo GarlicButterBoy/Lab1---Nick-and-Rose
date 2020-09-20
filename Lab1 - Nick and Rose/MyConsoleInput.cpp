@@ -9,7 +9,7 @@
 using namespace std;
 
 //ReadDouble function
-double MyConsoleInput::ReadDouble(const double MIN, const double MAX)
+double ConsoleInput::ReadDouble(const double MIN, const double MAX)
 {
 	double validNumber = 0.0; // holds user input
 
