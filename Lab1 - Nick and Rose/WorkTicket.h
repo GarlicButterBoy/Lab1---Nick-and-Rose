@@ -31,7 +31,7 @@ public:
 	//Mutators (Setters): Changes the Object
 	void SetTicketNumber(int ticketNumber);
 	void SetTicketDate(int day, int month, int year);
-	void SetID(string clientID);
+	void SetID();
 	void SetDescription(string description);
 
 	//Methods (Functions)

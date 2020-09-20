@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const int ARRAY_SIZE = 3;
+const int ARRAY_SIZE = 1;
 
 /// <summary>
 ///Turns a Char array into a string
@@ -34,28 +34,19 @@ string ArrayToString(char* a, int size)
 int GenerateTicketNumber()
 {
 	char valid[] = "0123456789";
-	char num_array[10];
+	char num_array[5];
 	string output;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		num_array[i] = valid[rand() % 10];
+		num_array[i] = valid[rand() % 5];
 	}
-	output = ArrayToString(num_array, 10);
+	output = ArrayToString(num_array, 5);
 
 	int ticketNumber = stoi(output);
 
 	return ticketNumber;
 
-
-
-	//int randNum;
-	//do
-	//{
-	//	randNum = rand();
-	//} while (100 < randNum || 199 > randNum); //do loop generates a number until it lands between 100 and 199 (pedantic)
-
-	//return  randNum;
 }
 
 /// <summary>
@@ -67,7 +58,7 @@ string GenerateClientID()
 	srand(time(0)); //using a seed allows for "not-so-true-but-basically" random generation
 
 	//array of valid characters to choose from
-	char valid[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVabcdefghijklmnopqrtuvwxyz";
+	char valid[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtuvwxyz";
 	char rand_array[6];
 	string output;
 
@@ -117,7 +108,7 @@ WorkTicket ReadWorkTicketInfo()
 	//Asks the user for the year
 	cout << endl << "Year: ";
 	year = ConsoleInput::ReadInteger(2000, 2099);
-	DateToString(day, month, year);
+	ticketDate = DateToString(day, month, year);
 
 	//Gets the ticket description
 	cout << "What is your reason for creating the ticket?\n\n";

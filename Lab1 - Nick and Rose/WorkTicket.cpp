@@ -87,9 +87,10 @@ void WorkTicket::SetTicketDate(int day, int month, int year)
 	myYear = yearInput;
 }
 
-void WorkTicket::SetID(string clientID)
+void WorkTicket::SetID()
 {
-	myID = GenerateClientID();
+	//const string clientID = GenerateClientID();
+	//myID = clientID;
 }
 
 void WorkTicket::SetDescription(string description)
@@ -113,7 +114,3 @@ string WorkTicket::ToString()
 	return outputStr;
 
 }
-
-
-
-
